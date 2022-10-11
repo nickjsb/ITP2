@@ -2,10 +2,16 @@
 //Object orientation revisted
 //part one
 
+var flying_saucer_x;
+var flying_saucer_y;
+
 function setup()
 {
     createCanvas(800,600);
     noStroke();
+
+    flying_saucer_x = 200;
+    flying_saucer_y = 100;
 }
 
 function draw()
@@ -18,10 +24,10 @@ function draw()
     
     //draw the flying saucer
     fill(175,238,238);
-    arc(200,100,75,100,PI,TWO_PI)
+    arc(flying_saucer_x,flying_saucer_y,75,100,PI,TWO_PI)
     fill(150);
-    arc(200,100,150,50,PI,TWO_PI);
+    arc(flying_saucer_x,flying_saucer_y,150,50,PI,TWO_PI);
     fill(50);
-    arc(200,100,150,25,0,PI);
+    arc(flying_saucer_x,flying_saucer_y,150,25,0,PI);
     
 }
