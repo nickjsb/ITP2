@@ -5,6 +5,7 @@
 var flying_saucer_x;
 var flying_saucer_y;
 var flying_saucer_width;
+var flying_saucer_height;
 
 function setup()
 {
@@ -14,6 +15,7 @@ function setup()
     flying_saucer_x = 400;
     flying_saucer_y = 150;
     flying_saucer_width = 200;
+    flying_saucer_height = 50;
 }
 
 function draw()
@@ -26,11 +28,23 @@ function draw()
     
     //draw the flying saucer
     fill(175,238,238);
-    arc(flying_saucer_x, flying_saucer_y, flying_saucer_width / 2, 100, PI, TWO_PI)
+    arc(
+        flying_saucer_x, 
+        flying_saucer_y, 
+        flying_saucer_width / 2, 
+        flying_saucer_height * 2, 
+        PI, TWO_PI)
     fill(150);
-    arc(flying_saucer_x, flying_saucer_y, flying_saucer_width, 50, PI, TWO_PI);
+    arc(flying_saucer_x, 
+        flying_saucer_y, 
+        flying_saucer_width, 
+        flying_saucer_height, 
+        PI, TWO_PI);
     fill(50);
-    arc(flying_saucer_x, flying_saucer_y, flying_saucer_width, 25, 0, PI);
+    arc(flying_saucer_x, 
+        flying_saucer_y, 
+        flying_saucer_width, flying_saucer_height / 2, 
+        0, PI);
 
     flying_saucer_x += random(-2, 2);
     flying_saucer_y += random(-1, 1);
