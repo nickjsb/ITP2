@@ -31,12 +31,17 @@ function setup(){
 
         beam: function(){
             fill(255,255,100,150);
-            beginShape();
-            vertex(this.x - this.width * 0.25, this.y);
-            vertex(this.x + this.width * 0.25, this.y);
-            vertex(this.x + this.width * 0.35, height - 100);
-            vertex(this.x - this.width * 0.35, height - 100);
-            endShape(CLOSE);
+            
+            if(random() > 0.5){
+                beginShape();
+                vertex(this.x - this.width * 0.25, this.y);
+                vertex(this.x + this.width * 0.25, this.y);
+                vertex(this.x + this.width * 0.35, height - 100);
+                vertex(this.x - this.width * 0.35, height - 100);
+                endShape(CLOSE);
+            }
+
+    
             }
 
     }
