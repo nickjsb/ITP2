@@ -52,6 +52,8 @@ function draw(){
     //draw the ground
     fill(0,50,  0);
     rect(0,height - 100, width, 100);
+
+    flying_saucer.beam();
     
     //draw the flying saucer
     fill(175,238,238);
@@ -74,7 +76,7 @@ function draw(){
 
     flying_saucer.hover();
     flying_saucer.lights();
-    flying_saucer.beam();
+    
 
 
     fill(255);
