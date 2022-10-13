@@ -32,7 +32,7 @@ function setup(){
         beam: function(){
             fill(255,255,100,150);
             
-            if(random() > 0.1){
+            if(random() > 0.25){
                 beginShape();
                 vertex(this.x - this.width * 0.25, this.y);
                 vertex(this.x + this.width * 0.25, this.y);
