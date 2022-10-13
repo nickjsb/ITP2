@@ -19,7 +19,7 @@ function setup(){
     }
 
     for(var i = 0; i < flying_saucer.num_lights; i++){
-        flying_saucer.brightnesses.push((i * 10) % 255); 
+        flying_saucer.brightnesses.push((i * 30) % 255); 
     }
 }
 
