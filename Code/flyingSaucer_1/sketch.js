@@ -27,7 +27,13 @@ function setup(){
             for(var i = 0; i < this.num_lights; i++){
                 this.brightnesses.push((i * 30) % 255); 
             }
+        },
+
+        beam: function(){
+            fill(255,255,100,100);
+            rect(this.x, this.y, 300,300);
         }
+
     }
 
   //  for(var i = 0; i < flying_saucer.num_lights; i++){
@@ -63,7 +69,7 @@ function draw(){
 
     flying_saucer.hover();
     flying_saucer.lights();
-
+    flying_saucer.beam();
 
 
     fill(255);
