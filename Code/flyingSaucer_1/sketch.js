@@ -14,7 +14,12 @@ function setup(){
         window_width:0.5,
         window_height:1.2,
         base_height:0.45,
-        num_lights:20
+        num_lights:20,
+        brightnesses: []
+    }
+
+    for(var i = 0; i < flying_saucer.num_lights; i++){
+        flying_saucer.brightnesses.push(200)
     }
 }
 
@@ -49,9 +54,10 @@ function draw(){
 
     fill(255);
     
-    var incr  = flying_saucer.width / (10 - 1)
+    var incr  = flying_saucer.width / (flying_saucer.num_lights - 1)
 
-    for(var i = 0; i < 10; i++){
+    for(var i = 0; i < flying_saucer.num_lights; i++){
+        fill(flying_saucer.brightnesses[i])
         ellipse(flying_saucer.x - flying_saucer.width / 2 + incr * i, 
                 flying_saucer.y, 
                 7.5);
