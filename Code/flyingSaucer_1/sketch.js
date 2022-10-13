@@ -10,7 +10,7 @@ function setup(){
         x:400,
         y:150,
         width:250,
-        height:75
+        height:75,
         window_width:0.5,
         window_height:1.2,
         base_height:0.45,
