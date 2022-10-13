@@ -19,7 +19,7 @@ function setup(){
     }
 
     for(var i = 0; i < flying_saucer.num_lights; i++){
-        flying_saucer.brightnesses.push(255)
+        flying_saucer.brightnesses.push((i * 20) % 255); 
     }
 }
 
@@ -60,7 +60,9 @@ function draw(){
         fill(flying_saucer.brightnesses[i])
         ellipse(flying_saucer.x - flying_saucer.width / 2 + incr * i, 
                 flying_saucer.y, 
-                7.5);
+                5);
+        flying_saucer.brightnesses[i] += 2;
+        flying_saucer.brightnesses[i] = flying_saucer.brightnesses[i] % 255  
     }
     
 }
