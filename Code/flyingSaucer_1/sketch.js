@@ -33,7 +33,7 @@ function setup(){
             fill(255,255,100,150);
             beginShape();
             vertex(this.x - this.width * 0.25, this.y);
-            vertex(this.x - this.width * 0.25, this.y);
+            vertex(this.x + this.width * 0.25, this.y);
             vertex(this.x + this.width * 0.25, height - 100);
             vertex(this.x - this.width * 0.25, height - 100);
             endShape(CLOSE);
