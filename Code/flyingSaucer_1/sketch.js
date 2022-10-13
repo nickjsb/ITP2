@@ -15,12 +15,24 @@ function setup(){
         window_height:1.2,
         base_height:0.45,
         num_lights:20,
-        brightnesses: []
+        brightnesses: [],
+
+        hover: function(){
+            //console.log("hover")
+            this.x += random(-2, 2);
+            this.y += random(-1, 1);
+        },
+
+        lights: function(){
+            for(var i = 0; i < this.num_lights; i++){
+                this.brightnesses.push((i * 30) % 255); 
+            }
+        }
     }
 
-    for(var i = 0; i < flying_saucer.num_lights; i++){
-        flying_saucer.brightnesses.push((i * 30) % 255); 
-    }
+  //  for(var i = 0; i < flying_saucer.num_lights; i++){
+  //      flying_saucer.brightnesses.push((i * 30) % 255); 
+  //  }
 }
 
 function draw(){
@@ -49,8 +61,10 @@ function draw(){
         flying_saucer.width, flying_saucer.height / 2, 
         0, PI);
 
-    flying_saucer.x += random(-2, 2);
-    flying_saucer.y += random(-1, 1);
+    flying_saucer.hover();
+    flying_saucer.lights();
+
+
 
     fill(255);
     
